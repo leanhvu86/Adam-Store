@@ -8,6 +8,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet"  href="css/bootstrap.min.css">
         <link rel="stylesheet"  href="css/style.css">
+        <link rel="stylesheet"  href="css/main.css">
         <title>Quản lý cửa hàng</title>
         <script>
             function changeContent() {
@@ -27,7 +28,7 @@
                         <h4 style="position: absolute;color: white;top: 55%;left: 4%">Admin Page</h4>
 
                     </div>
-                    <img alt="eShop" style="width: 130px;height: 40px; position: absolute;top:55%;left: 20%" src="${pageContext.request.contextPath}/image/logoA.png">
+<!--                    <img alt="eShop" style="width: 130px;height: 40px; position: absolute;top:55%;left: 20%" src="${pageContext.request.contextPath}/image/logoA.png">-->
                     <a style="position: absolute;color: white;top: 40px;right:10px;">Xin chào: ${emp.username}</a>
                 </div>
                 <div class="col-md-2"><a href="logOut.htm" class="btn btn-danger btn-sm" style="margin-top: 3em">Đăng xuất</a></div>
