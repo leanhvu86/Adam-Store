@@ -4,9 +4,25 @@
         <servlet-name>ControllerCartBean</servlet-name>
         <servlet-class>controller.ControllerCartBean</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>controller.AdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginAccController</servlet-name>
+        <servlet-class>controller.LoginAccController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControllerCartBean</servlet-name>
         <url-pattern>/ControllerCartBean</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/AdminController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginAccController</servlet-name>
+        <url-pattern>/LoginAccController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

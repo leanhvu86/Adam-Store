@@ -236,6 +236,9 @@ ul.right-menu {
     position: relative;
 
 }
+article h2{
+    color:#0083C9;
+}
 /* tin tuc chinh*/
 article #img-new{
     float: left;

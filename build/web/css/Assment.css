@@ -98,7 +98,7 @@ li.main-menu{
 ul.menu-1{
     position: absolute;
     width: 300px;
-    background: #FE980F;
+    background: #0e29a3;
     padding: 0;
     margin: 0;
 }
@@ -111,7 +111,7 @@ ul.menu-1{
 .menu-1 li:hover{
     padding: 0;
     margin: 0;
-    background:#FE980F ;
+   
 }
 .menu-1 li:hover>a{
     color: white;
@@ -235,6 +235,9 @@ ul.right-menu {
     border:1px solid ghostwhite;
     position: relative;
 
+}
+article h2{
+    color:#0083C9;
 }
 /* tin tuc chinh*/
 article #img-new{

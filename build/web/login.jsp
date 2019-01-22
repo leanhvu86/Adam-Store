@@ -84,16 +84,19 @@
 
             </div>
         </nav>
-       
-        <article style=" margin-top: 25%;height: 700px">
 
-            <div style="margin-left: 200px;margin-top:  200px;width: 350px;height: 250px;border: 1px dodgerblue dotted;border-radius: 20px">
-                <form style="padding: 20px 30px">
-                    <h3 style="color: blueviolet"> Login</h3>
-              Username:  <input type="text" id="name" style="width: 200px"/><br><br><br>
-               Password: <input type="password" id="password" style="width: 200px"/><br><br><br>
-               <input type="submit" value="Đăng nhập" >
+        <article style=" margin-top: 25%;height:600px;width: 100%">
+            <marquee> <h2>CHÀO MỪNG BẠN ĐẾN VỚI WEBSITE ADAMSHOP</h2></marquee> 
+
+            <div style="margin-left: 200px;margin-top:100px;width: 450px;height: 250px;border: 1px dodgerblue dotted;border-radius: 20px">
+                <h4 style="margin-left: 30px;color: blueviolet">Vui lòng đăng nhập username và password</h4>
+                <form action="LoginAccController" method="post">
+                    UserName: <input type="text" name="txtUsername" value=""/><br/><br/>
+                    PassWord: <input type="password" name="txtPass" value=""/><br/><br/>
+                    <input type="submit" value="Login" name="btAction"/><br/><br/>
+                    <input type="reset" value="Reset"/>
                 </form>
+                 <h5 style="color: red">${sessionScope.erroMsg}</h5>
             </div>
         </article>
 
@@ -104,8 +107,8 @@
 
                     <a class="text">95 Yên Phụ-P.Trung Trực-Q.Ba Đình-HN </a>
                     <a class="text"> Telephone: +84 24 7305 8668</a>
-                    <a class="text"> Email: shopmen@gmail.com</a>
-                    <a class="text">Website: shopmen.com.vn</a>
+                    <a class="text"> Email: Adamshop@gmail.com</a>
+                    <a class="text">Website: Adamshon.com.vn</a>
                 </div>
 
             </div>

@@ -30,6 +30,12 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css" />
         <script src="js/jquery-1.9.1.min.js"></script>
+
+        <script>
+            function Redirect() {
+                window.location = "login.jsp";
+            }
+        </script>
     </head>
     <div class="container">
 
@@ -43,7 +49,7 @@
                 <a href="#" title="Tài khoản">Tài khoản</a>
                 <a href="#" title="Yêu thích">Yêu thích</a>
                 <a href="#" title="Giỏ hàng">Giỏ hàng</a>
-                <a href="#" title="Login">Login</a>
+                <a onclick="return Redirect();" title="Login"> Login</a>
                 <img style="width: 28px;height: 20px;" src="${pageContext.request.contextPath}/Image/VN.png" title="Vietnamese">
                 <img style="width: 28px;height: 20px;" src="${pageContext.request.contextPath}/Image/UK.png" title="English">
             </div>
@@ -84,7 +90,7 @@
 
             </div>
         </nav>
-       
+
         <article style=" margin-top: 25%;">
 
             <section>
@@ -94,7 +100,7 @@
                         <div class="col-sm-9 padding-right">
                             <div class="features_items"><!--features_items-->
                                 <h2 class="title text-center">Features Items</h2>
-                              
+
                                 <%
                                     Products listSP = new Products();
                                     List<Product> list = listSP.showProduct("");
@@ -134,14 +140,14 @@
                 </div>
 
             </section>
-                              <section>
+            <section>
 
                 <div class="row" >
                     <div class="col-sm-3">
                         <div class="col-sm-9 padding-right">
                             <div class="features_items"><!--features_items-->
                                 <h2 class="title text-center">Hot Items</h2>
-                               
+
                                 <%
                                     Products listSPHot = new Products();
                                     List<Product> list1 = listSPHot.showProductListTop();
@@ -231,10 +237,10 @@
 </html>
 <script src="js/assignment.js"></script>
 <script>
-                        var indexCurrent = 3;      // Chỉ số hình đầu tiên hiển thị ở slide
-                        var loop = true;  // Bật lặp slide 
-                        var showbutton = true;  // Hiện 2 button điều hướng
-                        var duration = 4000;   // Thời gian chờ chuyển hình (tính theo đơn vị milisecond)
+                        var indexCurrent = 3; // Chỉ số hình đầu tiên hiển thị ở slide
+                        var loop = true; // Bật lặp slide 
+                        var showbutton = true; // Hiện 2 button điều hướng
+                        var duration = 4000; // Thời gian chờ chuyển hình (tính theo đơn vị milisecond)
 
                         initSlider();
 </script>

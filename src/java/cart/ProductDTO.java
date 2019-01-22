@@ -1,5 +1,6 @@
 package cart;
 
+import model.Product;
 import java.io.Serializable;
 
 import model.*;
