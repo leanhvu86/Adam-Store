@@ -26,11 +26,12 @@ public class Products {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			String url = "jdbc:sqlserver://localhost:1433;databaseName=QLBanHang";
 			Connection con = DriverManager.getConnection(url, "sa", "123456789");
-			String sql = "SELECT * FROM Product";
+			String sql = "SELECT top 10 * FROM Product";
 			if (!type.equals("")) {
 				sql += " WHERE type LIKE '%" + type + "%'";
 			}
 			Statement st = con.createStatement();
+                        System.out.println(sql);
 			ResultSet rs = st.executeQuery(sql);
 			List<Product> list = new ArrayList<>();
 			while(rs.next()) {
@@ -51,10 +52,10 @@ public class Products {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			String url = "jdbc:sqlserver://localhost:1433;databaseName=QLBanHang";
 			Connection con = DriverManager.getConnection(url, "sa", "123456789");
-			String sql = "SELECT top 5 FROM Product";
+			String sql = "SELECT top 10 * FROM Product";
 			
-				sql += "group by Code order by id desc";
-			
+				sql += " order by sold desc";
+			              System.out.println(sql);
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery(sql);
 			List<Product> list = new ArrayList<>();
@@ -66,7 +67,7 @@ public class Products {
 				list.add(sp);
 			}
 			return list;
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
 		return null;

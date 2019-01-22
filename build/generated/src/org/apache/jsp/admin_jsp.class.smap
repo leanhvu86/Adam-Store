@@ -4,7 +4,7 @@ JSP
 *S JSP
 *F
 + 0 admin.jsp
-jsp/admin.jsp
+admin.jsp
 *L
 1,30:44
 31,2:74,3

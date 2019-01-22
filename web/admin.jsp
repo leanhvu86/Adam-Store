@@ -6,7 +6,8 @@
 
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet"  href="css/bootstrap.min.css">
+        <link rel="stylesheet"  href="css/bootstrap.css">
+        <link rel="stylesheet"  href="css/bootstrap.min_1.css">
         <link rel="stylesheet"  href="css/style.css">
         <link rel="stylesheet"  href="css/main.css">
         <title>Quản lý cửa hàng</title>
@@ -48,7 +49,7 @@
                     <div class="panel panel-primary" >
                         <!--<div class="panel-heading">Products Manager</div>-->
                         <div class="list-group" style="width: 100%;float: left">
-                            <span href="#" class="list-group-item active panel-heading">Sản phẩm</span>
+                            <span  class="list-group-item active panel-heading">Sản phẩm</span>
                             <a href="listB.htm" id="productManager" class="list-group-item">Quản lý sản phẩm</a>
                             <a href="initInsertB.htm" id="addManager" class="list-group-item ">Thêm sản phẩm mới</a>
                             <a href="listCate.htm" id="kindManager" class="list-group-item list-group-item-warning">Loại sản phẩm</a>
@@ -62,7 +63,7 @@
                     <div class="panel panel-primary" style="margin-top: 45px">
                         <!--<div class="panel-heading">Products Manager</div>-->
                         <div class="list-group">
-                            <span href="#" class="list-group-item active panel-heading">Danh sách khách hàng</span>
+                            <span class="list-group-item active panel-heading">Danh sách khách hàng</span>
                             <a href="listCustomerType.htm" id="customerManager" class="list-group-item list-group-item-warning">Quản lý khách hàng</a>
                             <a href="listCustomerType.htm" id="typeCustomer" class="list-group-item ">Quản lý kiểu khách hàng</a>
 
@@ -73,7 +74,7 @@
                     <div class="panel panel-primary" style="margin-top: 45px">
                         <!--<div class="panel-heading">Products Manager</div>-->
                         <div class="list-group">
-                            <span href="#" class="list-group-item active panel-heading">Quản lí đơn hàng</span>
+                            <span class="list-group-item active panel-heading">Quản lí đơn hàng</span>
 
 
                             <a href="listCustomerType.htm" id="orderApproved" class="list-group-item ">Quản lý đơn hàng đã xác nhận</a>

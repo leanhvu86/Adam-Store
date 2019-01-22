@@ -1,4 +1,4 @@
-package org.apache.jsp.jsp;
+package org.apache.jsp;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -50,8 +50,8 @@ public final class admin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <head>\n");
       out.write("        <meta charset=\"UTF-8\">\n");
       out.write("        <link rel=\"stylesheet\"  href=\"css/bootstrap.min.css\">\n");
-      out.write("         <link rel=\"stylesheet\"  href=\"css/bootstrap.min_1.css\">\n");
-      out.write("         <link rel=\"stylesheet\"  href=\"css/bootstrap.css\">\n");
+      out.write("        <link rel=\"stylesheet\"  href=\"css/style.css\">\n");
+      out.write("        <link rel=\"stylesheet\"  href=\"css/main.css\">\n");
       out.write("        <title>Quản lý cửa hàng</title>\n");
       out.write("        <script>\n");
       out.write("            function changeContent() {\n");

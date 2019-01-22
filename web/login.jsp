@@ -85,102 +85,16 @@
             </div>
         </nav>
        
-        <article style=" margin-top: 25%;">
+        <article style=" margin-top: 25%;height: 700px">
 
-            <section>
-
-                <div class="row" >
-                    <div class="col-sm-3">
-                        <div class="col-sm-9 padding-right">
-                            <div class="features_items"><!--features_items-->
-                                <h2 class="title text-center">Features Items</h2>
-                              
-                                <%
-                                    Products listSP = new Products();
-                                    List<Product> list = listSP.showProduct("");
-                                    for (Product sp : list) {
-                                        out.print(" <div class=\"col-sm-4\">");
-                                        out.print(" <div class=\"product-image-wrapper\">");
-                                        out.print("<div class=\"single-products\">");
-                                        out.print("<div class=\"productinfo text-center\">");
-                                        out.println(" <img style=\"width:100% ; height:auto;\" src=\"/Shop/Image/" + sp.getCode() + ".jpg\"/>");
-                                        out.println(" <h2>" + sp.getPrice() + " VND</h2>");
-                                        out.println("<p>" + sp.getName() + "</p>");
-                                        out.println("<input class=\"btn btn-default add-to-cart\" type=\"submit\" name=\"action\" value=\"Add to cart\"><img style=\"width:20px ; height:20px;\" src=\"/Shop/Image/product-detail/cart.png\"/>");
-                                        out.println("</div>");
-                                        out.println(" <div class=\"product-overlay\">");
-                                        out.println("<div class=\"overlay-content\">");
-                                        out.println(" <h2>" + sp.getPrice() + " VND</h2>");
-                                        out.println("<p>" + sp.getName() + "</p>");
-                                        out.println("<input class=\"btn btn-default add-to-cart\" type=\"submit\" name=\"action\" value=\"Add to cart\"><img style=\"width:20px ; height:20px;\" src=\"/Shop/Image/product-detail/cart.png\"/>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                        out.println("  <div class=\"choose\">");
-                                        out.println("     <ul class=\"nav nav-pills nav-justified\">");
-                                        out.println("   <li><img style=\"width:20px ; height:20px;\" src=\"/Shop/Image/product-detail/add.png\"/><a>Add to wishlist</a></li>");
-
-                                        out.println(" </ul>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                    }
-                                %>
-                            </div><!--features_items-->
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </section>
-                              <section>
-
-                <div class="row" >
-                    <div class="col-sm-3">
-                        <div class="col-sm-9 padding-right">
-                            <div class="features_items"><!--features_items-->
-                                <h2 class="title text-center">Hot Items</h2>
-                               
-                                <%
-                                    Products listSPHot = new Products();
-                                    List<Product> list1 = listSPHot.showProductListTop();
-                                    for (Product sp : list1) {
-                                        out.print(" <div class=\"col-sm-4\">");
-                                        out.print(" <div class=\"product-image-wrapper\">");
-                                        out.print("<div class=\"single-products\">");
-                                        out.print("<div class=\"productinfo text-center\">");
-                                        out.println(" <img style=\"width:100% ; height:auto;\" src=\"/Shop/Image/" + sp.getCode() + ".jpg\"/>");
-                                        out.println(" <h2>" + sp.getPrice() + " VND</h2>");
-                                        out.println("<p>" + sp.getName() + "</p>");
-                                        out.println("<input class=\"btn btn-default add-to-cart\" type=\"submit\" name=\"action\" value=\"Add to cart\"><img style=\"width:20px ; height:20px;\" src=\"/Shop/Image/product-detail/cart.png\"/>");
-                                        out.println("</div>");
-                                        out.println(" <div class=\"product-overlay\">");
-                                        out.println("<div class=\"overlay-content\">");
-                                        out.println(" <h2>" + sp.getPrice() + " VND</h2>");
-                                        out.println("<p>" + sp.getName() + "</p>");
-                                        out.println("<input class=\"btn btn-default add-to-cart\" type=\"submit\" name=\"action\" value=\"Add to cart\"><img style=\"width:20px ; height:20px;\" src=\"/Shop/Image/product-detail/cart.png\"/>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                        out.println("  <div class=\"choose\">");
-                                        out.println("     <ul class=\"nav nav-pills nav-justified\">");
-                                        out.println("   <li><img style=\"width:20px ; height:20px;\" src=\"/Shop/Image/product-detail/add.png\"/><a>Add to wishlist</a></li>");
-
-                                        out.println(" </ul>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                        out.println(" </div>");
-                                    }
-                                %>
-                            </div><!--features_items-->
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </section>
+            <div style="margin-left: 200px;margin-top:  200px;width: 350px;height: 250px;border: 1px dodgerblue dotted;border-radius: 20px">
+                <form style="padding: 20px 30px">
+                    <h3 style="color: blueviolet"> Login</h3>
+              Username:  <input type="text" id="name" style="width: 200px"/><br><br><br>
+               Password: <input type="password" id="password" style="width: 200px"/><br><br><br>
+               <input type="submit" value="Đăng nhập" >
+                </form>
+            </div>
         </article>
 
         <footer>
