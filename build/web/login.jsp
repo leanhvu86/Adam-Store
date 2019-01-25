@@ -33,116 +33,24 @@
     </head>
     <div class="container">
 
-        <header>
-            <div id="demo-2" style='margin-left: 10px'>
-                <input type="search" placeholder="Search">
-            </div>
-
-            <div class="top-menu">
-
-                <a href="#" title="Tài khoản">Tài khoản</a>
-                <a href="#" title="Yêu thích">Yêu thích</a>
-                <a href="#" title="Giỏ hàng">Giỏ hàng</a>
-                <a href="#" title="Login">Login</a>
-                <img style="width: 28px;height: 20px;" src="${pageContext.request.contextPath}/Image/VN.png" title="Vietnamese">
-                <img style="width: 28px;height: 20px;" src="${pageContext.request.contextPath}/Image/UK.png" title="English">
-            </div>
-
-        </header>
-        <nav>
-            <img style="width: 150px;height: 50px;" id="img_logo" src="${pageContext.request.contextPath}/Image/ADAM.png" title="SHOP MEN">
-            <ul id="menu">
-
-                <li class="main-menu"><a href="Gopy.html">Góp ý</a> </li>
-                <li class="main-menu" Style="width:auto"><a href="Tintuc&lienhe.html">Fantage</a></li>
-                <li class="main-menu"><a href="Gioithieu.html">Men's Fashion</a>
-                    <ul class="menu-1">
-                        <li id="sub-1"><a href="Gioithieu.html" title="Giới thiệu">Jacket</a></li>
-                        <li id="sub-1"><a href="LichsuWellspring.html" title="Lịch sử phát triển">Tuxedo</a></li>
-                        <li id="sub-1"><a href="Thongdieptruong.html" title="Tổng quan">Shose</a></li>
-                        <li id="sub-1"><a href="Thongdieptruong.html" title="Tổng quan">Trourse</a></li>
-                        <li id="sub-1"><a href="Thongdieptruong.html" title="Tổng quan">Sportwear</a></li>
-                    </ul>
-                </li>
-                <li class="main-menu"><a href="index.html">Trang chủ</a> </li>
-            </ul>
-
-        </nav>
-        <nav style="margin-top: 0px;">
-            <div class="slider-container">
-                <div class="slider">
-
-                    <img src="${pageContext.request.contextPath}/Image/slide/anh1.png" title="Slide 1" />
-                    <img src="${pageContext.request.contextPath}/Image/slide/anh2.png" title="Slide 2" />
-                    <img src="${pageContext.request.contextPath}/Image/slide/anh3.png" title="Slide 3" />
-                    <img src="${pageContext.request.contextPath}/Image/slide/anh4.jpg" title="Slide 4" />
-                    <img src="${pageContext.request.contextPath}/Image/slide/anh5.jpg" title="Slide 5" />
-                    <button type="button" onclick="getPrevImage()" class="btn" id="btnPrev">&lsaquo;</button>
-                    <button type="button" onclick="getNextImage()" class="btn" id="btnNext">&rsaquo;</button>
-                    <h1 id="titleSlider">Slide Title 1</h1>
-                </div>
-
-            </div>
-        </nav>
-
+        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="topSlider.jsp"></jsp:include>
         <article style=" margin-top: 25%;height:600px;width: 100%">
             <marquee> <h2>CHÀO MỪNG BẠN ĐẾN VỚI WEBSITE ADAMSHOP</h2></marquee> 
 
             <div style="margin-left: 200px;margin-top:100px;width: 450px;height: 250px;border: 1px dodgerblue dotted;border-radius: 20px">
                 <h4 style="margin-left: 30px;color: blueviolet">Vui lòng đăng nhập username và password</h4>
-                <form action="LoginAccController" method="post">
-                    UserName: <input type="text" name="txtUsername" value=""/><br/><br/>
-                    PassWord: <input type="password" name="txtPass" value=""/><br/><br/>
-                    <input type="submit" value="Login" name="btAction"/><br/><br/>
-                    <input type="reset" value="Reset"/>
+                <form action="LoginAccController" method="post" style="padding: 50px">
+                    UserName: <input style="margin-left: 20px" type="text" name="txtUsername" value=""/><br/><br/>
+                    PassWord: <input style="margin-left: 20px" type="password" name="txtPass" value=""/><br/><br/>
+                    <input type="submit" value="Login" name="btAction"/>
+                    <input style="margin-left: 20px" type="reset" value="Reset"/>
                 </form>
                  <h5 style="color: red">${sessionScope.erroMsg}</h5>
             </div>
         </article>
 
-        <footer>
-            <div style="position: absolute;
-                 bottom: 5%;left: 5%;">
-                <div class="imfo">
-
-                    <a class="text">95 Yên Phụ-P.Trung Trực-Q.Ba Đình-HN </a>
-                    <a class="text"> Telephone: +84 24 7305 8668</a>
-                    <a class="text"> Email: Adamshop@gmail.com</a>
-                    <a class="text">Website: Adamshon.com.vn</a>
-                </div>
-
-            </div>
-            <div>
-                <table class="subcribe">
-
-                    <form action="">
-                        <tr>
-                            <td class="text-footer">Đăng ký nhận thông tin tại đây:</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:left;">
-                                <input type="text" name="email" id="email" placeholder="Your Email"></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:left;color:rgb(57, 133, 184);"><input class="button" type="submit" value="SUBCRIBE"></td>
-
-                        </tr>
-
-
-
-                    </form>
-
-                </table>
-                <div class="aa-footer-social">
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/fb.png" alt="" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/twiter.png" alt="" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/google.png" alt="" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/ytube.png" alt="" /></a>
-                </div>
-            </div>
-            <hr>
-            <a class="text-footer" id="all-right">Shop Men &#169; 2017. All right reserved</a>
-        </footer>
+        <jsp:include page="footer.jsp"></jsp:include>
     </div>
 </body>
 </html>

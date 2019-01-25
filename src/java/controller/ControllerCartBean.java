@@ -33,61 +33,61 @@ public class ControllerCartBean extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     RequestDispatcher rd = null;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-		try {
-			String action = request.getParameter("action");
-			if (action.equals("Add to Cart")) {
-				HttpSession session = request.getSession(true);
-				CartBean shop = (CartBean) session.getAttribute("SHOP");
-				if (shop == null) {
-					shop = new CartBean();
-				}
-				String code = request.getParameter("txtCode");
-				String name = request.getParameter("txtName");
-				String price = request.getParameter("txtPrice");
-				
-				Product s = new Product(code, name, price);
-				ProductDTO sp = new ProductDTO(s);
-				shop.addSanPham(sp);
-				session.setAttribute("SHOP", shop);
-				rd = request.getRequestDispatcher("index.jsp");
-				rd.forward(request, response);
-				System.out.println("add to cart");
-			} else if (action.equals("View Cart")) {
-				rd = request.getRequestDispatcher("showcart.jsp");
-				rd.forward(request, response);
-				System.out.println("View cart");
-			} else if (action.equals("AddMore")) {
-				rd = request.getRequestDispatcher("index.jsp");
-				rd.forward(request, response);
-				System.out.println("add more");
-			} else if (action.equals("Remove")) {
-				String[] list = request.getParameterValues("rmv");
-				if (list != null) {
-					HttpSession session = request.getSession();
-					if (session != null) {
-						CartBean shop = (CartBean) session.getAttribute("SHOP");
-						if (shop != null) {
-							for (int i = 0; i < list.length; i++) {
-								shop.removeSanPham(list[i]);
-							}
-							session.setAttribute("SHOP", shop);
-						}
-					}
-				}
-				String url = "ControllerCartBean?action=View Cart";
-				rd = request.getRequestDispatcher(url);
-				rd.forward(request, response);
-				System.out.println("Remove");
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			out.close();
-		}
+        try {
+            String action = request.getParameter("action");
+            if (action.equals("Add to Cart")) {
+                HttpSession session = request.getSession(true);
+                CartBean shop = (CartBean) session.getAttribute("SHOP");
+                if (shop == null) {
+                    shop = new CartBean();
+                }
+                String code = request.getParameter("txtCode");
+                String name = request.getParameter("txtName");
+                String price = request.getParameter("txtPrice");
+                System.out.println(code + "code");
+                System.out.println(name + "name");
+                System.out.println(price + "price");
+                Product s = new Product(code, name, price);
+                ProductDTO sp = new ProductDTO(s);
+                shop.addSanPham(sp);
+                session.setAttribute("SHOP", shop);
+                rd = request.getRequestDispatcher("index.jsp");
+                rd.forward(request, response);
+                System.out.println(shop.toString());
+                System.out.println("add to cart");
+            } else if (action.equals("View Cart")) {
+                rd = request.getRequestDispatcher("showcart.jsp");
+                rd.forward(request, response);
+                System.out.println("View cart");
+            }else if (action.equals("Remove")) {
+                String[] list = request.getParameterValues("rmv");
+                if (list != null) {
+                    HttpSession session = request.getSession();
+                    if (session != null) {
+                        CartBean shop = (CartBean) session.getAttribute("SHOP");
+                        if (shop != null) {
+                            for (int i = 0; i < list.length; i++) {
+                                shop.removeSanPham(list[i]);
+                            }
+                            session.setAttribute("SHOP", shop);
+                        }
+                    }
+                }
+                String url = "ControllerCartBean?action=View Cart";
+                rd = request.getRequestDispatcher(url);
+                rd.forward(request, response);
+                System.out.println("Remove");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            out.close();
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

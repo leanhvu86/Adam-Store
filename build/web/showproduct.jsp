@@ -32,47 +32,12 @@
         <script src="js/jquery-1.9.1.min.js"></script>
     </head>
     <div class="container">
+        <jsp:include page="header.jsp"></jsp:include>
+            <nav style="margin-top: 0px;">
+                <div class="slider-container">
+                    <div class="slider">
 
-        <header>
-            <div id="demo-2" style='margin-left: 10px'>
-                <input type="search" placeholder="Search">
-            </div>
-
-            <div class="top-menu">
-
-                <a href="#" title="Tài khoản">Tài khoản</a>
-                <a href="#" title="Yêu thích">Yêu thích</a>
-                <a href="#" title="Giỏ hàng">Giỏ hàng</a>
-                <a href="#" title="Login">Login</a>
-                <img style="width: 28px;height: 20px;" src="${pageContext.request.contextPath}/Image/VN.png" title="Vietnamese">
-                <img style="width: 28px;height: 20px;" src="${pageContext.request.contextPath}/Image/UK.png" title="English">
-            </div>
-
-        </header>
-        <nav>
-            <img style="width: 150px;height: 50px;" id="img_logo" src="${pageContext.request.contextPath}/Image/ADAM.png" title="SHOP MEN">
-            <ul id="menu">
-
-                <li class="main-menu"><a href="Gopy.html">Góp ý</a> </li>
-                <li class="main-menu" Style="width:auto"><a href="Tintuc&lienhe.html">Fantage</a></li>
-                <li class="main-menu"><a href="Gioithieu.html">Men's Fashion</a>
-                    <ul class="menu-1">
-                        <li id="sub-1"><a href="Gioithieu.html" title="Giới thiệu">Jacket</a></li>
-                        <li id="sub-1"><a href="LichsuWellspring.html" title="Lịch sử phát triển">Tuxedo</a></li>
-                        <li id="sub-1"><a href="Thongdieptruong.html" title="Tổng quan">Shose</a></li>
-                        <li id="sub-1"><a href="Thongdieptruong.html" title="Tổng quan">Trourse</a></li>
-                        <li id="sub-1"><a href="Thongdieptruong.html" title="Tổng quan">Sportwear</a></li>
-                    </ul>
-                </li>
-                <li class="main-menu"><a href="index.html">Trang chủ</a> </li>
-            </ul>
-
-        </nav>
-        <nav style="margin-top: 0px;">
-            <div class="slider-container">
-                <div class="slider">
-
-                    <img src="${pageContext.request.contextPath}/Image/slide/anh1.png" title="Slide 1" />
+                        <img src="${pageContext.request.contextPath}/Image/slide/anh1.png" title="Slide 1" />
                     <img src="${pageContext.request.contextPath}/Image/slide/anh2.png" title="Slide 2" />
                     <img src="${pageContext.request.contextPath}/Image/slide/anh3.png" title="Slide 3" />
                     <img src="${pageContext.request.contextPath}/Image/slide/anh4.jpg" title="Slide 4" />
@@ -181,8 +146,8 @@
                                 <p>5000000 VND</p>
                             </div>                    
                         </li>
-                        
-                        
+
+
                         <li>
                             <a href="#" class="aa-cartbox-img"><img alt="img" src="${pageContext.request.contextPath}/Image/SP004.jpg"></a>
                             <div class="aa-cartbox-info">
@@ -215,31 +180,7 @@
                         <div class="col-sm-9 padding-right">
                             <div class="features_items"><!--features_items-->
                                 <h2 class="title text-center">Features Items</h2>
-                                <!--                                <div class="col-sm-4">
-                                                                    <div class="product-image-wrapper">
-                                                                        <div class="single-products">
-                                                                            <div class="productinfo text-center">
-                                                                                <img src="${pageContext.request.contextPath}/Image/SP001.jpg" alt="" />
-                                                                                <h2>$56</h2>
-                                                                                <p>Easy Polo Black Edition</p>
-                                                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                                                            </div>
-                                                                            <div class="product-overlay">
-                                                                                <div class="overlay-content">
-                                                                                    <h2>$56</h2>
-                                                                                    <p>Easy Polo Black Edition</p>
-                                                                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                                                                </div>
-                                                                            </div>
-                                                               S         </div>
-                                                                        <div class="choose">
-                                                                            <ul class="nav nav-pills nav-justified">
-                                                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>-->
+
                                 <%
                                     Products listSP = new Products();
                                     List<Product> list = listSP.showProduct("");
@@ -281,49 +222,7 @@
             </section>
         </article>
 
-        <footer>
-            <div style="position: absolute;
-                 bottom: 5%;left: 5%;">
-                <div class="imfo">
-
-                    <a class="text">95 Yên Phụ-P.Trung Trực-Q.Ba Đình-HN </a>
-                    <a class="text"> Telephone: +84 24 7305 8668</a>
-                    <a class="text"> Email: shopmen@gmail.com</a>
-                    <a class="text">Website: shopmen.com.vn</a>
-                </div>
-
-            </div>
-            <div>
-                <table class="subcribe">
-
-                    <form action="">
-                        <tr>
-                            <td class="text-footer">Đăng ký nhận thông tin tại đây:</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:left;">
-                                <input type="text" name="email" id="email" placeholder="Your Email"></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align:left;color:rgb(57, 133, 184);"><input class="button" type="submit" value="SUBCRIBE"></td>
-
-                        </tr>
-
-
-
-                    </form>
-
-                </table>
-                <div class="aa-footer-social">
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/fb.png" alt="" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/twiter.png" alt="" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/google.png" alt="" /></a>
-                    <a href="#"><img src="${pageContext.request.contextPath}/Image/ytube.png" alt="" /></a>
-                </div>
-            </div>
-            <hr>
-            <a class="text-footer" id="all-right">Shop Men &#169; 2017. All right reserved</a>
-        </footer>
+        <jsp:include page="footer.jsp"></jsp:include>
     </div>
 </body>
 </html>

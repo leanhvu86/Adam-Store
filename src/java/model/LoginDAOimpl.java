@@ -27,7 +27,7 @@ public class LoginDAOimpl implements LoginDAO{
            PreparedStatement pa=con.prepareStatement(sql);
            pa.setString(1, username);
            pa.setString(2, password);
-           System.out.println(sql);
+           System.out.println(sql+"fdsf"+username+"fdsfds"+password);
            ResultSet ss=pa.executeQuery();
            boolean result=ss.next();
            ss.close();

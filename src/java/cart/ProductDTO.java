@@ -1,11 +1,14 @@
 package cart;
 
-import model.Product;
 import java.io.Serializable;
 
 import model.*;
 
 public class ProductDTO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Product sanpham;
 	private int quantity;
 	public ProductDTO() {
